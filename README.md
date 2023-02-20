@@ -1,4 +1,7 @@
-# ForestSensing
+# Outlier Prediction for Land cover change
+
+## Part 1 - Data Collection
+Data was primarily extracted from 2 sources. 
 Adilabad Forest analysis using remote sensing
 
 
