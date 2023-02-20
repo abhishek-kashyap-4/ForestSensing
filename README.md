@@ -2,7 +2,7 @@
 Adilabad Forest analysis using remote sensing
 
 
-![Markov Hidden States](plots/Markov Model Hidden states.png)
+![Markov Hidden States](plots/"Markov Model Hidden states.png")
 
 
 ![ndvi change.pngs](plots/ndvi change.png)
