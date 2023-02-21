@@ -28,9 +28,11 @@ Each "Normal" region in the locality can be expected to have the same seasonalit
 
 ![ndvithrice.png](plots/ndvithrice.png)
 
-The histogram for NDVI, EVI and VI: 
+However, Outlier NDVI behaves differently. Consider region that is a "Clear outlier":
 
-![NDVI_EVI_VI](plots/ndvi_evi_vi_hist.png)
+![clear outlier.png](plots/clear-outlier.png)
+
+There is a very obvious difference between a normal region and an outlier region. We want to develop a model that correctly differentiates between all the normal regions and outlier regions. Although a time series discriminative approach is more popular for this problem, I choose to differentiate the regions based on their probability distributions. In this generative approach, the behaviour of normal and outlier regions are modelled seperately, and they are differentiated with a posteriori probability.
 
 
 ## Part 3 - Models
