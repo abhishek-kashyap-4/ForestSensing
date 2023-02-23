@@ -58,7 +58,7 @@ A hidden Markov model (HMM) is a statistical model that can be used to describe 
 2. HMM training with Expectation-Maximization: Baum–Welch algorithm
 3. Maximum a posteriori estimate: viterbi (Dynamic Programming)
 
-![HMM](hmm.png)
+![HMM](imgs/hmm.png)
 
 For our purposes, HMM can be used to differentiate between "Normal" regions and regions with outlier behaviour. a Gaussian HMM is the most applicable for our scenario, as the change of NDVI(or EVI) is expected to have a mean and a variance roughly following a Gaussian Distribution.
 
