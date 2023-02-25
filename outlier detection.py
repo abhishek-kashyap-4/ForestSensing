@@ -11,6 +11,8 @@ import matplotlib.pyplot as plt
 from  scipy.fft import fft
 import os
 from statsmodels.tsa.holtwinters import SimpleExpSmoothing
+import helpers
+import seaborn as sns
 os.environ["OMP_NUM_THREADS"] = '1'
 
 from  hmmlearn import  hmm
@@ -27,7 +29,7 @@ def smooth(ss):
     plt.plot(res)
     plt.legend(['orig','smooth'])
     
-smooth(pixels[3])    
+#smooth(pixels[3])    
     
 def mergepixels(pixelssublist):
     '''
@@ -97,6 +99,56 @@ plt.grid(True)
 plt.xlabel("datetime", fontsize=16)
 plt.ylabel("NDVI ", fontsize=16)  
 
+
+" Visualize means and variance of the region"
+means = []
+covars = []
+
+for i in  range(len(pixels)):
+    pixelhistory = pixels[i]
+    pixelchangehistory = pixelchanges[i]
+    best, states = fithmm(pixelchangehistory,3,3)
+    mean = best.means_.copy()
+    covar = best.covars_.copy()#length is number of hidden states
+    meannew , covarnew = zip(*sorted(zip(mean, covar)))
+    means.append([f[0] for f in meannew])
+    covars.append([f[0] for f in covarnew])
+    
+
+#assume states are 3 here
+n = len(means)
+NDVIS_means0 = NDVIS[0].copy() 
+NDVIS_means1 = NDVIS[0].copy() 
+NDVIS_means2 = NDVIS[0].copy() 
+NDVIS_means3 = NDVIS[0].copy() 
+assert len(means) == len(positions)
+for i in range(n):
+    pos = positions[i]
+    NDVIS_means0[pos[0] ][ pos[1]] = means[i][0]
+    NDVIS_means1[pos[0] ][ pos[1]] = means[i][1]
+    NDVIS_means2[pos[0] ][ pos[1]] = means[i][2]
+    NDVIS_means3[pos[0] ][ pos[1]] = (means[i][0]+means[i][1]+means[i][2])/3
+m = len(NDVIS_means0)
+
+fig, ((ax1, ax2), (ax3,ax4)) = plt.subplots(nrows = 2, ncols=2)
+fig.subplots_adjust(wspace=0.08)
+
+
+sns.heatmap(NDVIS_means0,ax=ax1)
+ax1.set_title("Decreasing NDVI")
+sns.heatmap(NDVIS_means1,ax=ax2) 
+ax2.set_title("Constant NDVI")
+sns.heatmap(NDVIS_means2,ax=ax3)  
+ax3.set_title("Increasing NDVI")
+sns.heatmap(NDVIS_means3,ax=ax4)  
+ax4.set_title("mean NDVI")
+
+    
+    
+
+    
+
+    
 
 
 

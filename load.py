@@ -7,7 +7,7 @@ import os, glob
 
 def load_specific(col):
     NDVIS = []
-    for filename in glob.glob('adilabad tiff\\*.tif'):
+    for filename in glob.glob('data\\*.tif'):
        if(col not in filename):
            continue
        with rasterio.open(os.path.join(os.getcwd(), filename), 'r') as image:

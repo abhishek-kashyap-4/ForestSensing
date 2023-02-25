@@ -75,6 +75,13 @@ Fitting the regions to HMM without explicitly controlling the number of hidden s
 Every region would fit to a different number of hidden states because of inherent noise. However, this can be addressed with smoothing the data, or getting better data.
 
 
+Post-fit visualization:
+
+![Heatmap](plots/ndviheatmap.png)
+
+3 regions are selected based on : increasing NDVI, constant NDVI, decreasing NDVI. Each heatmap visualizes the distribution of means across the region. 
+ 
+
 
 
 
