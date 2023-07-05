@@ -1,12 +1,12 @@
 # Outlier Prediction for Land cover change
 
-## Part 0 - Progress ![](https://geps.dev/progress/68)
+## Part 0 - Progress ![](https://geps.dev/progress/75)
 
 1. ![](https://geps.dev/progress/100) Sample Data from MODIS                               
 2. ![](https://geps.dev/progress/100) Preprocessing MODIS sample data                      
 3. ![](https://geps.dev/progress/100) Better data (better resolution) extraction from GEE  
-4. ![](https://geps.dev/progress/40) Preprocessing GEE data                               
-5. ![](https://geps.dev/progress/90) Exploratory Data Analysis                            
+4. ![](https://geps.dev/progress/100) Preprocessing GEE data                               
+5. ![](https://geps.dev/progress/100) Exploratory Data Analysis                            
 6. ![](https://geps.dev/progress/80) Feature Engineering for Hidden Markov Models         
 7. ![](https://geps.dev/progress/100) HMM training for NDVI change                         
 8. ![](https://geps.dev/progress/40) Outlier detection from trained HMM  
