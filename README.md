@@ -1,5 +1,9 @@
 # Outlier Prediction for Land cover change
 
+## Summary
+
+The goal of this project is to identify and model the probabilistic behaviour of Land Cover, Land Usage Change, especially in forest regions. If the deforestration across the globe due to various reasons can be modeled via a Hidden Markov Model, future research in LCLUC would drastrically improve, as one only need to compute the behaviour of change and use statistics to determine whether it is an expected pattern.
+
 ## Part 0 - Progress ![](https://geps.dev/progress/75)
 
 1. ![](https://geps.dev/progress/100) Sample Data from MODIS                               
@@ -12,25 +16,30 @@
 8. ![](https://geps.dev/progress/100) HMM training for NDVI change                         
 9. ![](https://geps.dev/progress/40) Outlier detection from trained HMM  
 10. ![](https://geps.dev/progress/30) Outlier Prediction for future land cover change 
-11. ![](https://geps.dev/progress/0) Hypothesis, Conclusion                
+11. ![](https://geps.dev/progress/0) Hypothesis, Conclusion
+                
 
 ## Part 1 - Data Collection
-Data was primarily extracted from MODIS Application for Extracting and Exploring Analysis Ready Samples (AρρEEARS). This Dataset with pre-computed NDVI, EVI values was used as a baseline for developing the models. 
-Data with better spatial resolution was later extracted from GEE. Currently, I am preprocessing this data to fit the models.
+Several regions across the globe were considered for this project. For Adilabad, data was primarily extracted from MODIS Application for Extracting and Exploring Analysis Ready Samples (AρρEEARS). This Dataset with pre-computed NDVI, EVI values was used as a baseline for developing the models. 
+A different region in India with better spatial resolution was later extracted from GEE and preprocessed. 
 
 
-A sample of 125 regions with 500m resolution was used with the following bands:
+Following the conventions of literature, the following bands were used so far:
 
 1. Normalized Difference Vegetation Index (NDVI)
 2. Enhanced Vegetation Index (EVI)
-3. Date of Year
-4. MIR, NIR reflectance
+3. Normalized Different Water Index(NDWI)
+4. Leaf area Index (LAI)
+5. Temperature
+6. Cloud Cover
+7. Date of Year
+8. MIR, NIR reflectance
 
 ## Part 2 - Data Visualization:
 
 ![ee_chart.png](imgs/ee-chart.png)
 
-The NDVI values of the sample region for a specific timestep look like this:
+The NDVI values of a sample region for a specific timestep look like this:
 
 ![sample_NDVI__adilabad.png](plots/sample_NDVI__adilabad.png)
 
