@@ -2,7 +2,13 @@
 
 ## Summary
 
-The goal of this project is to identify and model the probabilistic behaviour of Land Cover, Land Usage Change, especially in forest regions. If the deforestration across the globe due to various reasons can be modeled via a Hidden Markov Model, future research in LCLUC would drastrically improve, as one only need to compute the behaviour of change and use statistics to determine whether it is an expected pattern.
+The goal of this project is to identify and model the probabilistic behaviour of Land Cover Land Usage Change, especially in forest regions. If the deforestration across the globe due to various reasons can be modeled via a Hidden Markov Model, future research in LCLUC would drastically improve, as one only needs to compute the behaviour of change and use statistics to determine whether it is an expected pattern.
+
+Another Advantage of using HMMs in LCLUC is the fact that these probabilistical models can be constantly updated by utilizing an expectation-maximization(EM) approach, such as the Baum-Welch algorithm. With more data, the model does not get more complex, rather it gets more accuracte; asymptotically converging at the true LCLUC nature of forests or any other application. 
+
+HMMs can also be trained on simple observation such as the time series of NDVI; and it can also be created over more complex combinations of spectral information; or even on unsupervised cluster label change ( Cluster-Based State Modeling). This approach sacrifices general reproducability of the model for precise focus on the region of interest; thereby being capable of generating powerful results. Spatial information can also be encoded into the HMM states with this approach.
+
+
 
 ## Part 0 - Progress ![](https://geps.dev/progress/75)
 
@@ -14,7 +20,7 @@ The goal of this project is to identify and model the probabilistic behaviour of
 6. ![](https://geps.dev/progress/100) Clustering pixels based on Spectral Cluster information.
 7. ![](https://geps.dev/progress/80) Feature Engineering for Hidden Markov Models         
 8. ![](https://geps.dev/progress/100) HMM training for NDVI change
-9. ![](https://geps.dev/progress/0) HMM training based on clusters                     
+9. ![](https://geps.dev/progress/20) Cluster Based State Modeling.                     
 10. ![](https://geps.dev/progress/40) Outlier detection from trained HMM  
 11. ![](https://geps.dev/progress/30) Outlier Prediction for future land cover change 
 12. ![](https://geps.dev/progress/0) Hypothesis, Conclusion
