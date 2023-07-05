@@ -6,12 +6,13 @@
 2. ![](https://geps.dev/progress/100) Preprocessing MODIS sample data                      
 3. ![](https://geps.dev/progress/100) Better data (better resolution) extraction from GEE  
 4. ![](https://geps.dev/progress/100) Preprocessing GEE data                               
-5. ![](https://geps.dev/progress/100) Exploratory Data Analysis                            
-6. ![](https://geps.dev/progress/80) Feature Engineering for Hidden Markov Models         
-7. ![](https://geps.dev/progress/100) HMM training for NDVI change                         
-8. ![](https://geps.dev/progress/40) Outlier detection from trained HMM  
-9. ![](https://geps.dev/progress/30) Outlier Prediction for future land cover change 
-10. ![](https://geps.dev/progress/0) Hypothesis, Conclusion                
+5. ![](https://geps.dev/progress/100) Exploratory Data Analysis
+6. ![](https://geps.dev/progress/100) Clustering pixels based on Spectral Cluster information.
+7. ![](https://geps.dev/progress/80) Feature Engineering for Hidden Markov Models         
+8. ![](https://geps.dev/progress/100) HMM training for NDVI change                         
+9. ![](https://geps.dev/progress/40) Outlier detection from trained HMM  
+10. ![](https://geps.dev/progress/30) Outlier Prediction for future land cover change 
+11. ![](https://geps.dev/progress/0) Hypothesis, Conclusion                
 
 ## Part 1 - Data Collection
 Data was primarily extracted from MODIS Application for Extracting and Exploring Analysis Ready Samples (AρρEEARS). This Dataset with pre-computed NDVI, EVI values was used as a baseline for developing the models. 
@@ -26,6 +27,8 @@ A sample of 125 regions with 500m resolution was used with the following bands:
 4. MIR, NIR reflectance
 
 ## Part 2 - Data Visualization:
+
+![ee_chart.png](imgs/ee-chart.png)
 
 The NDVI values of the sample region for a specific timestep look like this:
 
