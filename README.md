@@ -13,10 +13,11 @@ The goal of this project is to identify and model the probabilistic behaviour of
 5. ![](https://geps.dev/progress/100) Exploratory Data Analysis
 6. ![](https://geps.dev/progress/100) Clustering pixels based on Spectral Cluster information.
 7. ![](https://geps.dev/progress/80) Feature Engineering for Hidden Markov Models         
-8. ![](https://geps.dev/progress/100) HMM training for NDVI change                         
-9. ![](https://geps.dev/progress/40) Outlier detection from trained HMM  
-10. ![](https://geps.dev/progress/30) Outlier Prediction for future land cover change 
-11. ![](https://geps.dev/progress/0) Hypothesis, Conclusion
+8. ![](https://geps.dev/progress/100) HMM training for NDVI change
+9. ![](https://geps.dev/progress/0) HMM training based on clusters                     
+10. ![](https://geps.dev/progress/40) Outlier detection from trained HMM  
+11. ![](https://geps.dev/progress/30) Outlier Prediction for future land cover change 
+12. ![](https://geps.dev/progress/0) Hypothesis, Conclusion
                 
 
 ## Part 1 - Data Collection
